@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&display=swap%27');
+
+*{
+    padding    : 0;
+    margin     : 0;
+    box-sizing : border-box;
+    font-family: 'Chakra Petch', Arial, Helvetica, sans-serif;
+}
+
+body{background-color: #282a36;}
+.container{width: 1280px; margin: auto;}
+
+.scene-one, .scene-two{
+    width           : 100%;
+    height          : 100vh;
+    display         : flex;
+    align-items     : center;
+    justify-content : center;    
+}
+.hide{display: none;}
+
+/* ------------------------
+    Teacher selection
+------------------------ */
+.box-select-person{
+    width          : 100%;
+    height         : 100%;
+    display        : flex;
+    flex-direction : column;
+    align-items    : center;
+    justify-content: center;
+}
+
+.person-txt{
+    font-size     : 30px;
+    padding-bottom: 16px;
+    text-shadow   : 6px 5px 3px rgb(12, 11, 11);
+    text-transform: uppercase;
+    color         : white;
+}
+
+.select-person{
+    width                : 50%;
+    display              : grid;
+    grid-template-columns: 1fr 1fr;
+    gap                  : 16px;
+}
+
+.person-item{
+    width           : 90%; 
+    height          : 90%;
+    position        : relative;
+    overflow        : hidden;
+    background-color: white;
+    z-index         : 5;
+    border-radius   : 20px;
+    box-shadow      : 6px 6px 3px rgb(15, 15, 15);
+}
+
+.person-item h3{
+    position    : absolute; 
+    top         : 0; 
+    padding-left: 16px;
+    padding-top : 5px;
+    color       : black; 
+    font-size   : 24px;
+    font-weight : bold;
+}
+.person-img{
+    width  : 100%;
+    height : 100%; 
+    z-index: 4;
+}
+
+.chair, .lee, .maestria, .d-book,
+.d-bookCase, .d-Tshirt, .t-mic, .t-Tshirt, 
+.t-musicalNotes, .p-Tshirt, .p-sankofa, .p-glasses{
+    width     : 100%;
+    height    : 100%;
+    position  : absolute;
+    top       : 0;
+    left      : 0;
+    z-index   : -1;
+    transition: .7s;
+}
+
+/*
+    Luan
+*/
+.chair    {transform: translateX(100%);}
+.lee      {transform: translateY(20%); z-index: 1;}
+.maestria {transform: translateY(100%);}
+
+.luan:hover .chair    {transform: translateX(0);}
+.luan:hover .lee      {transform: translateY(0);}
+.luan:hover .maestria {transform: translateY(0);}
+.luan:hover           {background-color: #6995ce; transition: .7s;}
+
+/*
+    Dandara
+*/
+.d-bookCase  {transform: translateX(-100%); top: 1vw;}
+.d-Tshirt    {opacity: 0; z-index: 1;}
+.d-book      {transform: translateX(-100%); top: 1vw;}
+
+.Dandara:hover .d-bookCase {transform: translateX(0);}
+.Dandara:hover .d-Tshirt   {opacity: 1;}
+.Dandara:hover .d-book     {transform: translateX(5%); transition: 1s;}
+.Dandara:hover             {background-color: #ffb730; transition: .7s;}
+
+/*
+    Tati
+*/
+.t-mic          {transform: translateX(100%); z-index: 1;}
+.t-Tshirt       {opacity: 0; z-index: 1;}
+.t-musicalNotes {opacity: 0;}
+
+.Tati:hover .t-mic          {transform: translateX(0);}
+.Tati:hover .t-Tshirt       {opacity: 1;}
+.Tati:hover .t-musicalNotes {opacity: 1; animation: playMusic 1s infinite;}
+.Tati:hover                 {background-color: #fe80fd; transition: .7s;}
+
+@keyframes playMusic{
+    0%  {transform: scale(1);}
+    25% {transform: scale(1.1);}
+    50% {transform: scale(1);}
+    75% {transform: scale(1.1);}
+    100%{transform: scale(1);}
+}
+
+/*
+    Pamela
+*/
+.p-sankofa{
+    width    : 25%;
+    height   : 25%;
+    top      : 75%; 
+    transform: translateX(-100%);
+}
+.p-Tshirt       {opacity: 0; z-index: 1;}
+.p-glasses      {opacity: 0; z-index: 1;}
+
+.Pamela:hover .p-sankofa{
+    transform: translateX(0);
+    animation: flipou 3s infinite; 
+}
+.Pamela:hover       .p-Tshirt   {opacity: 1;}
+.Pamela:hover       .p-glasses  {opacity: 1;}
+.Pamela:hover                   {background-color: #fffd63; transition: .7s;}
+
+@keyframes flipou {
+    0%  {transform: scaleX(-1);}
+    50% {transform: scaleX(1);}
+    100%{transform: scaleX(-1);}
+}
+
+/* ------------------------
+    Start Questions
+------------------------ */
+.box-question{
+    position        : relative;
+    width           : 100%;
+    height          : 400px;
+    display         : flex;
+    align-items     : center;
+    justify-content : center;
+}
+
+/*
+    ScoreBoard
+*/
+.scoreBoard{
+    width           : 30%;
+    height          : 5%;
+    position        : absolute;
+    top             : 10%;
+    right           : 10%;
+    display         : flex;
+    align-items     : center;
+    justify-content : center;
+    color           : white;
+}
+.box-money{
+    width           : 70%;
+    height          : 100%;
+    display         : flex;
+    align-items     : center;
+}
+.money-txt{font-size: 20px;}
+.money-img{width    : 8%; margin-right: .5vw;}
+
+.box-score{
+    width      : 30%;
+    display    : flex;
+    align-items: center;
+}
+.score-txt{font-size: 20px; text-transform: uppercase;}
+
+.box-person{
+    width          : 20%;
+    height         : 100%;
+    display        : flex;
+    align-items    : flex-end;
+    justify-content: center;
+}
+.person{width: 100%;}
+
+.question{
+    width           : 70%;
+    height          : 65%;
+    display         : flex;
+    align-items     : center;
+    justify-content : center;
+    background-color: violet;
+    border-radius   : 4vw 4vw 4vw 0px;
+       box-shadow      : 1vw 1vw .1vw rgba(0, 0, 0, 0.445);
+    text-align      : center;
+}
+.question-txt{
+    width    : 80%;
+    color    : black;
+    font-size: 30px;
+}
+
+.box-answer{
+    width          : 100%;
+    height         : 250px;
+    display        : flex;
+    flex-wrap      : wrap;
+    align-items    : center;
+    justify-content: space-evenly;
+
+}
+
+.btn{
+    position: relative;
+    width           : 45%;
+    height          : 35%;
+    cursor          : pointer;
+    color           : black;
+    border          : none;
+    border-radius   : 1vw;
+    outline         : none;
+    box-shadow      : 1vw 1vw .1vw rgba(0, 0, 0, 0.438);
+    background-color: rgb(243, 243, 92);    
+    font-size       : 20px;
+    font-weight     : bold;
+}
+.btn:hover{background-color: rgb(250, 250, 152);}
+
+
+@media (max-width: 902px){
+    .select-person{
+        width                : 60%;
+        display              : grid;
+        grid-template-columns: 1fr;
+        gap                  : 16px;
+    }
+
+    .person-txt{
+        width      : 90%;
+        text-align : center;
+        font-size  : 8vw;
+        padding    : 16px 0;
+        text-shadow: 6px 5px 3px rgb(12, 11, 11);
+    }
+
+    .person-item h3{
+        font-size   : 4vw;
+        padding-left: 10px;
+        padding-top : 5px;
+    }
+}
+
+@media (max-width: 702px){ 
+    .person-txt{font-size: 5vw;}
+    
+    .box-question{height: 40vh;}
+    .box-answer  {height:50vh}
+    .person{width: 175%;}
+
+    .btn{
+        width    : 80%;
+        height   : 18%;
+        font-size: 4vw;
+    }
+
+    .question-txt{
+        width    : 80%;
+        color    : black;
+        font-size: 4.5vw;
+    }
+
+    .scoreBoard{
+        width: 50%;
+        top: 8%;
+    }
+    .money-txt{font-size: 4vw;}
+    .score-txt{font-size: 4vw;}
+}

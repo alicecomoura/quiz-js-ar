@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Quiz Teste</title>
+</head>
+<body>
+    <section class="scene-one" id="sceneOne">
+        <div class="container">
+            <div class="box-select-person">
+                <h1 class="person-txt">Selecione um personagem abaixo</h1>
+
+                <div class="select-person">
+                    <!-- Person Dandara -->
+                    <div class="person-item Dandara" id="Dandara" onclick="getPerson(this.id)">
+                        <img class="person-img"      src="Assets/Dandara/Dandara.png" alt="img_Dandara">
+                        <h3>Dandara</h3>
+                        
+                        <img class="d-Tshirt"    src="Assets/Dandara/blusa.png"   alt="blusa_Dandara">
+                        <img class="d-bookCase"  src="Assets/Dandara/estante.png" alt="estante_Dandara">
+                        <img class="d-book"      src="Assets/Dandara/livro.png"   alt="livro_Dandara">
+                    </div>
+    
+                    <!-- Person Luan -->
+                    <div class="person-item luan" id="Luan" onclick="getPerson(this.id)">
+                        <img class="person-img"   src="Assets/Luan/luan.png" alt="img_Luan">
+                        <h3>Luan</h3>
+    
+                        <img class="chair"     src="Assets/Luan/chair-.png"   alt="chair_luan">
+                        <img class="lee"       src="Assets/Luan/lee.png"      alt="lee_luan">
+                        <img class="maestria"  src="Assets/Luan/maestria.png" alt="maestri_luan">
+                    </div>
+    
+                    <!-- Person Pâmela -->
+                    <div class="person-item Pamela" id="Pamela" onclick="getPerson(this.id)">
+                        <img class="person-img" src="Assets/Pam/pam.png" alt="img_Pâmela">
+                        <h3>Pâmela</h3>
+                        
+                        <img class="p-Tshirt"   src="Assets/Pam/blusa.png"   alt="blusa_Pâmela">
+                        <img class="p-sankofa"  src="Assets/Pam/sankofa.png" alt="microfone_Pâmela">
+                        <img class="p-glasses"  src="Assets/Pam/oculos.png"  alt="notas-Musicais_Pâmela">
+                    </div>
+    
+                    <!-- Person Tati -->
+                    <div class="person-item Tati" id="Tati" onclick="getPerson(this.id)">
+                        <img class="person-img"   src="Assets/Tati/Tati.png" alt="img_Tati">
+                        <h3>Tati</h3>
+    
+                        <img class="t-Tshirt"        src="Assets/Tati/blusa.png"           alt="blusa_tati">
+                        <img class="t-mic"           src="Assets/Tati/microfone.png"       alt="microfone_tati">
+                        <img class="t-musicalNotes"  src="Assets/Tati/notaas-musicais.png" alt="notas-Musicais_tati">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="scene-two" id="sceneTwo">
+        <div class="container">
+            <div class="box-question">
+                <div class="scoreBoard">
+                    <div class="box-money">
+                        <img class="money-img" src="Assets/money.png" alt="icon-money">
+                        <p   class="money-txt">R$</p>
+                    </div>
+
+                    <div class="box-score">
+                        <p class="score-txt">score:0</p>
+                    </div>  
+                </div>
+    
+                <div class="box-person">
+                    <img class="person" src="Assets/Dandara/Dandara.png" alt="img_Dandara">
+                </div>
+                
+                <div class="question">
+                    <h2 class="question-txt"></h2>
+                </div>
+            </div>
+    
+            <div class="box-answer" id="boxAnswer">
+                <button onclick="nextQuestion(this.innerText);" class="btn"></button>
+                <button onclick="nextQuestion(this.innerText);" class="btn"></button>
+                <button onclick="nextQuestion(this.innerText);" class="btn"></button>
+                <button onclick="nextQuestion(this.innerText);" class="btn"></button>
+            </div>
+        </div>
+    </section>
+
+    <script src="main.js"></script>
+</body>
+</html>

@@ -59,10 +59,9 @@ let myQuestions = [{
     answer: 2,
     money: 800
 }, {
-    questions: "gambiarra master",
-    options: ["master", "master", "master", "master"],
+    questions: "score",
+    options: ['', '', '', ''],
     answer: 0,
-
 }]
 
 let orderAnswer   = ["a", "b", "c", "d", "e"]
@@ -123,11 +122,6 @@ function nextQuestion(btnCurrent) {
         for (let i = 0; i < btnAnswer.length; i++) {
             questionTxt.innerText  = myQuestions[indexQuestion].questions;
 
-             if(indexQuestion == 2){
-                btnAnswer[i].style.fontSize = "3vw"    
-            }else 
-                btnAnswer[i].style.fontSize = "4vw"
-
             btnAnswer[i].innerText = /* ${orderAnswer[i]}) */ `${myQuestions[indexQuestion].options[i]}`;
             
             if(indexQuestion >= 12){
@@ -137,7 +131,7 @@ function nextQuestion(btnCurrent) {
                 }else if(scoreNum <= 8){
                     questionTxt.innerText  = `Você acertou ${scoreNum} de ${indexQuestion}. Isso significa que você está no caminho certo, mas pode melhorar.`;
                 }else{
-                    questionTxt.innerText  = `Parabéns! Você acertou ${scoreNum} de ${indexQuestion}. Significa- que você domina muito bem o contéudo.`;
+                    questionTxt.innerText  = `Parabéns! Você acertou ${scoreNum} de ${indexQuestion}. Significa que você domina muito bem o contéudo.`;
                 }
             }
         }

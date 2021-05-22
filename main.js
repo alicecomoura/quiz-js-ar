@@ -1,6 +1,6 @@
 let myQuestions = [{
     questions: "Qual destas qualidades NÃO são aplicadas no documento HTML?",
-    options: ['Código aberto', 'Linguagem utilizada com diversos recursos e uma comunidade ampla', 'Permite a implementação de lógica', 'Roda em todos os browsers'],
+    options: ['Código aberto', 'Linguagem com diversos recursos e uma comunidade ampla', 'Implementação de lógica', 'Aderência a todos os navegadores'],
     answer: 2,
     money: 5000
 }, {
@@ -9,13 +9,13 @@ let myQuestions = [{
     answer: 1,
     money: 1000
 }, {
-    questions: "Como a forma correta de inserir um link?",
-    options: ['<a href = "https://github.com/desbugaAi" desbugaAi>', '<a url = "href = "https://github.com/desbugaAi">desgubaAi<a/>', '<a href="https://github.com/desbugaAi">desgubaAi</a>', '<a>https://github.com/desbugaAi</a>'],
+    questions: "Como é a forma correta de inserir um link?",
+    options: ['<a href = "https://github.com/desbugaAi" desbugaAi>', '<a url = "href = "https://github.com/desbugaAi">desbugaAi<a/>', '<a href="https://github.com/desbugaAi">desbugaAi</a>', '<a>https://github.com/desbugaAi</a>'],
     answer: 2,
     money: 400
 }, {
     questions: "Como fazer com que cada palavra em um texto se torne maiúscula?",
-    options: ['text-transform:capitalize;', 'text-transform:uppercase;', 'text-capitalize', 'text-decoration:uppercase;'],
+    options: ['text-transform:capitalize', 'text-transform:uppercase', 'text-capitalize', 'text-decoration:uppercase'],
     answer: 1,
     money: 200
 }, {
